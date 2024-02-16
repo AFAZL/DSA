@@ -39,6 +39,22 @@ public class code {
         sum = a + b;
         System.out.println(sum);
 
+        String str = "aaabbbbbccccccccccccc444444444444444444444444444444444444444";
+        int freq[] = new int[256];
+        for (int i = 0; i < str.length(); i++) {
+            int id = str.charAt(i);
+            freq[id]++;
+        }
+        int max_id = -1;
+        int max_f = -1;
+        for (int i = 0; i < 256; i++) {
+            if (freq[i] > max_f) {
+                max_f = freq[i];
+                max_id = i;
+            }
+        }
+        System.out.println((char) max_id);
+
     }
 
 }
